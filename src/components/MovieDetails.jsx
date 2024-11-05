@@ -34,7 +34,6 @@ const MovieDetails = ({ selectedId, onAddWatch, watched, onBack }) => {
       runtime: Number(runtime.split(" ").at(0)),
       newRating,
     };
-    console.log("yoyo: ", newMovie);
     onAddWatch(newMovie);
     setNewRating(0);
     onBack();
