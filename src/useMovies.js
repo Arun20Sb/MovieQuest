@@ -30,7 +30,7 @@ export function useMovies(query) {
 
           setMovies(data.Search);
         } catch (error) {
-          console.log(error.message);
+          // console.log(error.message);
           if (error.name !== "AbortError") setIsError(error.message);
         } finally {
           setIsError("");
