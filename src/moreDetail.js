@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-const key = "6bf5dc92";
+const key = import.meta.env.VITE_OMDB_API_KEY;
+console.log(key);
 
 export function moreDetail(selectedId) {
   const [movie, setMovie] = useState({});
@@ -24,7 +25,7 @@ export function moreDetail(selectedId) {
           setMovie(data);
           setIsLoading(false);
         } catch (error) {
-          console.log(error.message);
+          // console.log(error.message);
         } finally {
           setIsError("");
           setIsLoading(false);
